@@ -3,14 +3,90 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
     <link rel="icon" type="image/svg+xml" href="images/2.jpg"/>
+    <title>Personal Portfolio Website </title>
     <link rel="stylesheet" href="text.css">
 </head>
 <body>
-    <h1>i am muski the only one</h1>
-    <div id="header"></div>
     
+    <div id="header" >
+        <div class="container">
+            <nav>
+                <img src="image" class="logo">
+                <ul>
+                     <li><a href="#">Home</a></li>
+                     <li><a href="about">About</a></li>
+                     <li><a href="#">Services</a></li>
+                     <li><a href="#">Portfolio</a></li>
+                     <li><a href="#">Contact</a></li>
+                </ul>
+
+            </nav>
+            <div class="header-text">
+                <p>exta do samethink//UI/UX Designer///</p>
+                <h1>Hi, I'm <span>Ahamed Muski</span><br> From Sri lanka</h1>
+            </div>
+        </div>
+
+    </div>
+<!-----------about---------->
+    <div class="about" id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/about1.jpg" alt="" width="200px" height="200px">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, sint quibusdam. Provident praesentium nemo cum exercitationem totam, veniam aperiam magnam, obcaecati, incidunt debitis commodi sint quisquam officia vitae dicta porro.</p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p> <p class="tab-links" onclick="opentab('Experience')">Experience</p> <p class="tab-links"onclick="opentab('Education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>UI/UL </span><br>Designing Web/App interfaces</li>
+                            <li><span>Web Development<br> </span>Web app Development</li>
+                            <li><span>App Development <br></span >Building Android/iOA app</li>
+                            <li><span>FIGMA </span><br>The
+                                Fundamentals of Figma and learning essential skills in UI/UX Design</li>
+                                
+
+                        </ul>
+
+                    </div>
+                    <div class="tab-contents" id="Experience">
+                        <ul>
+                            <li><span>2024-Current </span><br>UI/UX Design Training at Marazin Academy</li>
+                            <li><span>2024-Current </span><br>Microcontroller based ICT project</li>
+                            <li><span>2024-Current </span><br>Web site  Development</li>
+                            
+                        </ul>
+
+                    </div>
+                    <div class="tab-contents" id="Education">
+                        <ul>
+                            <li><span>2016-2018 </span><br>O/L</li>
+                            <li><span>2019-2022<br> </span>A/Lt</li>
+                            <li><span>2023-2026 <br></span >Studying UNIVERISTY OF MORATUWA    (Faculty of Information Tecnology)</li>
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     
+<script>
+    var tablinks=document.getElementsByClassName("tab-links");
+    var tabcontents=document.getElementsByClassName("tab-contents");
+    function opentab(tabname){
+        for(tablink of tablinks)
+        tablink.classList.remove("active-link");
+        for(tabcontent of tabcontents)
+        tabcontent.classList.remove("active-tab");
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+
+</script>
 </body>
 </html>

@@ -14,13 +14,15 @@
         <div class="container">
             <nav>
                 <img src="image" class="logo">
-                <ul>
-                     <li><a href="#">Home</a></li>
-                     <li><a href="">About</a></li>
-                     <li><a href="#">Services</a></li>
-                     <li><a href="#">Portfolio</a></li>
-                     <li><a href="#">Contact</a></li>
+                <ul id="sidemenu">
+                     <li><a href="#header">Home</a></li>
+                     <li><a href="#about">About</a></li>
+                     <li><a href="#services">Services</a></li>
+                     <li><a href="#portfolio">Portfolio</a></li>
+                     <li><a href="#contact">Contact</a></li>
+                     <i class="fas fa-times" onclick="closemenu()"></i>
                 </ul>
+                <i class="fas fa-bars" onclick="openmenu()"></i>
 
             </nav>
             <div class="header-text">
@@ -102,6 +104,7 @@
         </div>
     </div>
 </div>
+ <!-------=-portpolio----------->
 <div class="portfolio">
     <div class="container">
         <h1 class="sub-list">My Work</h1>
@@ -126,18 +129,42 @@
         <a href="#" class="btn">SEE MORE</a>
     </div>
 </div>
-<script>
-    var tablinks=document.getElementsByClassName("tab-links");
-    var tabcontents=document.getElementsByClassName("tab-contents");
-    function opentab(tabname){
-        for(tablink of tablinks)
-        tablink.classList.remove("active-link");
-        for(tabcontent of tabcontents)
-        tabcontent.classList.remove("active-tab");
-        event.currentTarget.classList.add("active-link");
-        document.getElementById(tabname).classList.add("active-tab");
-    }
+<!---------contcat----------->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fas fa-paper-plane"></i>tm.ahamedmuski@gmail.com</p>
+                <p><i class="fas fa-phone-square-alt"></i>0776620955</p>
+                <div class="social-icons">
+                    <a href=""><i class="fab fa-facebook"></i></a>
+                    <a href=""><i class="fab fa-github"></i></a>
+                    <a href=""><i class="fab fa-instagram"></i></a>
+                    <a href="tps://www.linkedin.com/in/ahamedmuskia23b09326?
+                    utm_source=share&utm_c
+                    ampaign=share_via&utm_content=pr
+                    ofile&utm_medium=android_app"><i class="fab fa-linkedin"></i></a>
+                </div>
+                <a href="PDF/Muski CV.pdf" download class="btn btn2">Download CV</a>
 
-</script>
+            </div>
+            <div class="contact-rigth">
+                <form>
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required><br>
+
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="copyrigth">
+        <p>Copyrigth C Muski.Made wiih<i class="fas fa-heart"></i> by Portfolio</p>
+    </div>
+</div>
+
+<script type="module" src="side.js"></script>
 </body>
 </html>

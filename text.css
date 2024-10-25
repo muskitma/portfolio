@@ -24,8 +24,9 @@ body{
     padding: 10px 10%;
 }
 nav{
+    text-align: right;
     display: flex;
-    align-items: center;
+    align-items: right;
     justify-content: space-between;
     flex-wrap: wrap;
 
@@ -319,6 +320,9 @@ form .btn2{
 }
 .copyrigth i{
     color: #ff004f;
+}
+nav .fas{
+    display: none;
 }
 @media only screen and (max-width: 600px){
     .header-text{

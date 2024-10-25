@@ -11,6 +11,7 @@ html{
 body{
     background-color: #080808;
     color: #f6f1f1;
+    margin-top: 60px;
   
 }
 #header{
@@ -24,15 +25,34 @@ body{
     padding: 10px 10%;
 }
 nav{
+    position: fixed;
+    top: 0;
+    width: 90%; /* Full width */
+    background-color: rgba(8, 8, 8, 0.8);
+    z-index: 1000;
     text-align: right;
     display: flex;
     align-items: right;
     justify-content: space-between;
     flex-wrap: wrap;
+    padding: 1px;
 
 }
+
+
+
+
 .logo{
-    width: 140px;
+    width: 50px;
+    border-radius: 10px;
+    display: block;
+    transition: transform 0.5s;
+    
+
+}
+
+.logo:hover{
+    transform: scale(2.1);
 }
 nav ul li{
    
@@ -336,6 +356,7 @@ nav .fas{
         display: block;
         font-size: 25px;
     }
+    
     nav ul{
         background: #ff004f;
         position: fixed;
@@ -381,4 +402,5 @@ nav .fas{
         font-size: 14px;
     }
 }
+
 

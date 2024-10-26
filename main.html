@@ -24,7 +24,7 @@
                      <i class="fas fa-times" onclick="closemenu()"></i>
                 </ul>
                 <i class="fas fa-bars" onclick="openmenu()"></i>
-hea
+
             </nav>
             <div class="header-text">
                 <p></p>
@@ -162,34 +162,11 @@ hea
         </div>
     </div>
     <div class="copyrigth">
-        <p>Copyrigth © 2024 Muski.Made wiih<i class="fas fa-heart"></i> by Portfolio</p>
+        <p>Copyrigth © 2024Muski.Made wiih<i class="fas fa-heart"></i> by Portfolio</p>
     </div>
 </div>
 
-<script type="module" src="side.js"></script>
-<script>
-    var tablinks = document.getElementsByClassName("tab-links");
-var tabcontents=document.getElementsByClassName("tab-contents");
-function opentab(tabname){
-    for(var tablink of tablinks)
-    tablink.classList.remove("active-link");
-    for(var tabcontent of tabcontents)
-    tabcontent.classList.remove("active-tab");
-    event.currentTarget.classList.add("active-link");
-    document.getElementById(tabname).classList.add("active-tab");
-}
+<script src="side.js" defer></script>
 
-
-</script>
-<script>
-    var sidemeu = document.getElementById("sidemenu");
-function openmenu(){
-    sidemeu.style.right = "0";
-}
-function closemenu(){
-    sidemeu.style.right = "-200px";
-}
-
-</script>
 </body>
 </html>

@@ -5,8 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <link rel="icon" type="image/svg+xml" href="2.jpg"/>
+    <link rel="icon" type="image/svg+xml" href="../images/2.jpg"/>
     <link rel="stylesheet" href="web.css">
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <title>LOGIN-PAGE</title>
 </head>
@@ -18,11 +19,11 @@
                 <span>
                     or use email for registeration
                 </span> 
-                <input type="text" placeholder="Name"  required>
-                <input type="email" placeholder="Email"  required>
+                <input type="text" placeholder="Name" required>
+                <input type="email" placeholder="Email" required>
                 <input type="password" placeholder="Password" id="sign-up-password" required>
                 <span class="password-error"></span>
-                <button type="button">Sign Up</button>
+                <button type="submit">Sign Up</button>
             </form>
         </div>
     
@@ -32,13 +33,13 @@
                 <span>
                     or use email or password
                 </span> 
-                <input type="text" placeholder="Name"  required>
-                <input type="email" placeholder="Email"  required>
-                <input type="password" placeholder="Password"  id="sign-in-password" required>
+                <input type="text" name="Name" placeholder="Name" required>
+                <input type="email" name="email" placeholder="Email" required>
+                <input type="password" name="password" placeholder="Password"  id="sign-in-password" required>
                 <span class="password-error"></span>
                 <a href="#">Forgot Your Password</a>
                 
-                <button type="button">Sign In</button>
+                <button type="submit">Sign In</button>
             </form>
         </div>
 
@@ -58,5 +59,6 @@
     </div>
     </div>
 <script src="web.js"></script>
+
 </body>
 </html>

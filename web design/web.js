@@ -50,3 +50,5 @@ document.addEventListener('DOMContentLoaded', function () {
     signUpForm.addEventListener('submit', validateForm);
     signInForm.addEventListener('submit', validateForm);
 });
+
+

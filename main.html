@@ -150,22 +150,76 @@
                 <a href="PDF/Muski CV.pdf" download class="btn btn2">Download CV</a>
 
             </div>
-            <div class="contact-rigth">
-                <form>
-                    <input type="text" name="Name" placeholder="Your Name" required>
-                    <input type="email" name="email" placeholder="Your Email" required><br>
-
-                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
-                    <button type="submit" class="btn btn2">Submit</button>
+            <div class="contact-right">
+                <form id="contact">
+                    <input type="hidden" id="idl" />
+                    <input type="text" name="Name" id="name" placeholder="Your Name" required />
+                    <input type="email" name="email" id="email" placeholder="Your Email" required />
+                    <input type="password" name="password" id="password" placeholder="password" required /><br />
+                    <textarea name="Message" id="message" rows="6" placeholder="Your Message" required></textarea>
+                    <button type="submit" class="btn btn2" id="submitSignIn">Submit</button>
                 </form>
             </div>
-        </div>
-    </div>
-    <div class="copyrigth">
-        <p>Copyrigth © 2024Muski.Made wiih<i class="fas fa-heart"></i> by Portfolio</p>
-    </div>
-</div>
-
+            <div class="copyrigth">
+                <p>Copyright © 2024 Muski. Made with <i class="fas fa-heart"></i> by Portfolio</p>
+            </div>
+            
+            <script type="module">
+                import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-app.js";
+                import { getDatabase, ref, push } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-database.js";
+            
+                const appSetting = {
+                    databaseURL: "https://mudiyalla-a1c67-default-rtdb.firebaseio.com/",
+                };
+            
+                const app = initializeApp(appSetting);
+                const database = getDatabase(app);
+                const usersListInDB = ref(database, "users");
+            
+                const idlEl = document.querySelector("#idl");
+                const nameEl = document.querySelector("#name");
+                const emailEl = document.querySelector("#email");
+                const passwordEL=document.querySelector("#password");
+                const messagesEl = document.querySelector("#message");
+                const contactForm = document.querySelector("#contact");
+            
+                contactForm.addEventListener("submit", function (e) {
+                    e.preventDefault(); // Prevent default form submission behavior
+            
+                    // If there is a hidden ID, exit the function
+                    if (idlEl.value) {
+                        return;
+                    }
+            
+                    // Create a new user object
+                    const newUser = {
+                        name: nameEl.value.trim(),
+                        email: emailEl.value.trim(),
+                        password:passwordEL.value.trim(),
+                        message: messagesEl.value.trim()
+                       
+                        
+                    };
+            
+                    // Push the new user data to Firebase
+                    
+                    push(usersListInDB, newUser)
+                        .then(() => {
+                            alert("Message submitted successfully!");
+                            
+                        })
+                    clearElements();    
+                });
+                function clearElements(){
+                    nameEl.value = "";
+                    emailEl.value = "";
+                    passwordEL.value = "";
+                    messagesEl.value = "";
+                  }
+            </script>
+            
+          
+ 
 <script src="side.js" defer></script>
 
 </body>

@@ -190,7 +190,10 @@
                     if (idlEl.value) {
                         return;
                     }
-            
+                    if (passwordEL.value.trim().length < 8) {
+                        alert("Password must be at least 8 characters long.");
+                        return; // Exit if password is too short
+                    }
                     // Create a new user object
                     const newUser = {
                         name: nameEl.value.trim(),
